@@ -51,6 +51,22 @@ func Test_Miles_ToMiles(t *testing.T) {
 	}
 }
 
+func Test_Kilometers_ToKilometers(t *testing.T) {
+	k := Kilometers(1.0)
+
+	if k.ToKilometers() != Kilometers(k.Kilometers()) {
+		t.Errorf("Wrong output from m.ToKilometers()")
+	}
+}
+
+func Test_Kilometers_ToMiles(t *testing.T) {
+	k := Kilometers(1.0)
+
+	if k.ToMiles() != Miles(k.Miles()) {
+		t.Errorf("Wrong output from m.ToMiles()")
+	}
+}
+
 func Test_Miles_Addition(t *testing.T) {
 	m := Miles(1.0)
 

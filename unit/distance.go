@@ -43,7 +43,7 @@ func (m Miles) ToMiles() Miles {
 }
 
 /*
-ToKilometers converts the distance value to a Kilometerss type
+ToKilometers converts the distance value to a Kilometers type
 */
 func (m Miles) ToKilometers() Kilometers {
 	return Kilometers(m.Kilometers())
@@ -61,4 +61,18 @@ Kilometers returns a distance value (in kilometers)
 */
 func (k Kilometers) Kilometers() float64 {
 	return float64(k)
+}
+
+/*
+ToMiles converts the distance value to a Miles type
+*/
+func (k Kilometers) ToMiles() Miles {
+	return Miles(k.Miles())
+}
+
+/*
+ToKilometers converts the distance value to a Kilometers type
+*/
+func (k Kilometers) ToKilometers() Kilometers {
+	return Kilometers(k.Kilometers())
 }
