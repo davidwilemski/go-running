@@ -50,3 +50,19 @@ func Test_Miles_ToMiles(t *testing.T) {
 		t.Errorf("Wrong output from m.ToMiles()")
 	}
 }
+
+func Test_Miles_Addition(t *testing.T) {
+	m := Miles(1.0)
+
+	if m+m != Miles(2.0) {
+		t.Errorf("Miles addition failed or wrong result")
+	}
+}
+
+func Test_Kilometers_Addition(t *testing.T) {
+	k := Kilometers(1.0)
+
+	if k+k != Kilometers(2.0) {
+		t.Errorf("Kilometers addition failed or incorrect")
+	}
+}
