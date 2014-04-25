@@ -1,5 +1,9 @@
 package unit
 
+const (
+	kiloInMiles = 0.62137
+)
+
 /*
 Kilometers distance unit
 */
@@ -32,7 +36,7 @@ func (m Miles) Miles() float64 {
 Kilometers returns a distance value (in kilometers)
 */
 func (m Miles) Kilometers() float64 {
-	return float64(m * 0.6)
+	return float64(m * kiloInMiles)
 }
 
 /*
@@ -53,7 +57,7 @@ func (m Miles) ToKilometers() Kilometers {
 Miles returns a distance value (in miles)
 */
 func (k Kilometers) Miles() float64 {
-	return float64(k / 0.6)
+	return float64(k * kiloInMiles)
 }
 
 /*

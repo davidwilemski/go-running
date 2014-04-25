@@ -14,7 +14,7 @@ func TestMilesTypeMilesFunc(t *testing.T) {
 func TestMilesTypeKilometersFunc(t *testing.T) {
 	m := Miles(1.0)
 
-	if m.Kilometers() != 0.6 {
+	if m.Kilometers() != kiloInMiles {
 		t.Errorf("Wrong output from m.Kilometers()")
 	}
 }
@@ -22,7 +22,7 @@ func TestMilesTypeKilometersFunc(t *testing.T) {
 func Test_Kilometers_MilesFunc(t *testing.T) {
 	k := Kilometers(1.0)
 
-	if k.Miles() != 1.0/0.6 {
+	if k.Miles() != 1.0*kiloInMiles {
 		t.Errorf("Wrong output from k.Miles()")
 	}
 }
