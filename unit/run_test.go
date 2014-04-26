@@ -13,3 +13,19 @@ func TestPacePerMile(t *testing.T) {
 		t.Errorf("Incorrect pace conversion", run.PacePerMile())
 	}
 }
+
+func TestPacePerKilometer(t *testing.T) {
+	run := Run{distance: Kilometers(5), time: time.Duration(20 * time.Minute)}
+	pace := run.PacePerKilometer()
+
+	if pace != time.Duration(4*time.Minute) {
+		t.Errorf("Incorrect pace conversion", run.PacePerKilometer())
+	}
+
+	run = Run{distance: Kilometers(5), time: time.Duration(25 * time.Minute)}
+	pace = run.PacePerKilometer()
+
+	if pace != time.Duration(5*time.Minute) {
+		t.Errorf("Incorrect pace conversion", run.PacePerKilometer())
+	}
+}

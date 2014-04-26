@@ -16,3 +16,8 @@ PacePerMile returns a Duration that represents the average minutes/mile of the R
 func (r Run) PacePerMile() time.Duration {
 	return time.Duration(time.Duration(r.time.Seconds()/r.distance.Miles()) * time.Second)
 }
+
+// PacePerKilometer returns a Duration that represents the average minutes/mile of the Run
+func (r Run) PacePerKilometer() time.Duration {
+	return time.Duration(time.Duration(r.time.Seconds()/r.distance.Kilometers()) * time.Second)
+}
